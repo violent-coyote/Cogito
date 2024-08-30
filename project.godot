@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Cogito"
-run/main_scene="res://COGITO/DemoScenes/COGITO_0_MainMenu.tscn"
+config/name="islandfps"
+run/main_scene="res://scenes/01_main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 run/max_fps=120
 boot_splash/image="res://COGITO/COGITO_icon.png"
@@ -205,6 +205,8 @@ ui_prev_tab={
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 anti_aliasing/quality/msaa_3d=1
 
 [shader_globals]

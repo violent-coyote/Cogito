@@ -1,11 +1,19 @@
-[gd_resource type="Resource" script_class="CogitoInventory" load_steps=2 format=3 uid="uid://ev2xuamhfojm"]
+[gd_resource type="Resource" script_class="CogitoInventory" load_steps=5 format=3 uid="uid://ev2xuamhfojm"]
 
 [ext_resource type="Script" path="res://COGITO/InventoryPD/cogito_inventory.gd" id="1_vgg6i"]
+[ext_resource type="Resource" uid="uid://lc5uq2e6ldah" path="res://COGITO/InventoryPD/Items/Cogito_Pistol.tres" id="2_a5sqx"]
+[ext_resource type="Script" path="res://COGITO/InventoryPD/CustomResources/InventorySlotPD.gd" id="3_glpgp"]
+
+[sub_resource type="Resource" id="Resource_0llit"]
+script = ExtResource("3_glpgp")
+inventory_item = ExtResource("2_a5sqx")
+quantity = 1
+origin_index = -1
 
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_vgg6i")
 grid = true
-starter_inventory = Array[Resource("res://COGITO/InventoryPD/CustomResources/InventorySlotPD.gd")]([])
+starter_inventory = Array[ExtResource("3_glpgp")]([SubResource("Resource_0llit")])
 inventory_size = Vector2i(5, 3)
-inventory_slots = Array[Resource("res://COGITO/InventoryPD/CustomResources/InventorySlotPD.gd")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+inventory_slots = Array[ExtResource("3_glpgp")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])

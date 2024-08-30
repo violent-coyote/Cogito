@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.json"
+type="SpineSkeletonFileResource"
+uid="uid://dhu62m86ktvaa"
+path="res://.godot/imported/Skull.spine-json-b61c7a7b3335b6afca4062d41428be01.spjson"
+
+[deps]
+
+source_file="res://assets/images/skull export/Skull.spine-json"
+dest_files=["res://.godot/imported/Skull.spine-json-b61c7a7b3335b6afca4062d41428be01.spjson"]
+
+[params]
+

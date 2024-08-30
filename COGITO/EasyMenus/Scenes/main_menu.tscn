@@ -39,13 +39,13 @@ theme_override_constants/separation = 15
 [node name="TitleLabel" type="Label" parent="ContentMain"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
-text = "COGITO"
+text = "island fps"
 horizontal_alignment = 1
 
 [node name="TitleLabel2" type="Label" parent="ContentMain"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Template Project 2024"
+text = "crabonfire 2024"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="ContentMain"]
@@ -121,6 +121,7 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_n66hi")
 
 [node name="LegacyDemoSceneButton" type="Button" parent="ContentMain/GameMenu/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
@@ -154,7 +155,7 @@ offset_top = 603.0
 offset_right = 600.0
 offset_bottom = 603.0
 script = ExtResource("13_4uenq")
-start_game_scene = "res://COGITO/DemoScenes/COGITO_3_Lobby.tscn"
+start_game_scene = "res://scenes/02_island_fps.tscn"
 
 [node name="LegacyDemoSceneSwitcher" type="Node" parent="."]
 script = ExtResource("9_kfsif")

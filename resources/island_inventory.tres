@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CogitoInventory" load_steps=5 format=3 uid="uid://dw8ignu3sdnu3"]
+
+[ext_resource type="Script" path="res://COGITO/InventoryPD/cogito_inventory.gd" id="1_47onv"]
+[ext_resource type="Resource" uid="uid://ckvdkigvwowm5" path="res://COGITO/InventoryPD/Items/Cogito_Flashlight.tres" id="2_cww66"]
+[ext_resource type="Script" path="res://COGITO/InventoryPD/CustomResources/InventorySlotPD.gd" id="3_r2e21"]
+
+[sub_resource type="Resource" id="Resource_f7ehx"]
+script = ExtResource("3_r2e21")
+inventory_item = ExtResource("2_cww66")
+quantity = 1
+origin_index = -1
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_47onv")
+grid = true
+starter_inventory = Array[ExtResource("3_r2e21")]([SubResource("Resource_f7ehx")])
+inventory_size = Vector2i(5, 3)
+inventory_slots = Array[ExtResource("3_r2e21")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])

@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://cxsw04nje02lj"
+path="res://.godot/imported/Spine.atlas-202058da7467dab46ba6566329cf53ef.spatlas"
+
+[deps]
+
+source_file="res://assets/images/skull export/flame rig/v2flamerig/Spine.atlas"
+dest_files=["res://.godot/imported/Spine.atlas-202058da7467dab46ba6566329cf53ef.spatlas"]
+
+[params]
+
+normal_map_prefix="n"

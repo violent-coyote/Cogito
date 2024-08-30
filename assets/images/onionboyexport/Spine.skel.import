@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://brqi1j0p4lj2w"
+path="res://.godot/imported/Spine.skel-ecb0ee6547657707332ba5cbad1d7cf5.spskel"
+
+[deps]
+
+source_file="res://assets/images/onionboyexport/Spine.skel"
+dest_files=["res://.godot/imported/Spine.skel-ecb0ee6547657707332ba5cbad1d7cf5.spskel"]
+
+[params]
+
