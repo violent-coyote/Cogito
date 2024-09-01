@@ -54,6 +54,7 @@ hint_component = ExtResource("17_bidre")
 ui_attribute_prefab = ExtResource("20_lscav")
 
 [node name="LeftJoystick" parent="." instance=ExtResource("6_eyjcy")]
+visible = false
 layout_mode = 1
 action_left = "left"
 action_right = "right"
@@ -61,6 +62,7 @@ action_up = "forward"
 action_down = "back"
 
 [node name="RightJoystick" parent="." instance=ExtResource("6_eyjcy")]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
