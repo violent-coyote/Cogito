@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bubcgr2q03ert"
 path.s3tc="res://.godot/imported/Dart.png-47181c4b3d55c226eca0609d03f32238.s3tc.ctex"
+path.etc2="res://.godot/imported/Dart.png-47181c4b3d55c226eca0609d03f32238.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://COGITO/Assets/Graphics/ItemIcons/Dart.png"
-dest_files=["res://.godot/imported/Dart.png-47181c4b3d55c226eca0609d03f32238.s3tc.ctex"]
+dest_files=["res://.godot/imported/Dart.png-47181c4b3d55c226eca0609d03f32238.s3tc.ctex", "res://.godot/imported/Dart.png-47181c4b3d55c226eca0609d03f32238.etc2.ctex"]
 
 [params]
 

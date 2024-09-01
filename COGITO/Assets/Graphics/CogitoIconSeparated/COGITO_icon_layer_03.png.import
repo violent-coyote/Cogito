@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://1oslnc23jviv"
 path.s3tc="res://.godot/imported/COGITO_icon_layer_03.png-f5b7fbb3f5953c0fd0ce5fe9a02a8913.s3tc.ctex"
+path.etc2="res://.godot/imported/COGITO_icon_layer_03.png-f5b7fbb3f5953c0fd0ce5fe9a02a8913.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://COGITO/Assets/Graphics/CogitoIconSeparated/COGITO_icon_layer_03.png"
-dest_files=["res://.godot/imported/COGITO_icon_layer_03.png-f5b7fbb3f5953c0fd0ce5fe9a02a8913.s3tc.ctex"]
+dest_files=["res://.godot/imported/COGITO_icon_layer_03.png-f5b7fbb3f5953c0fd0ce5fe9a02a8913.s3tc.ctex", "res://.godot/imported/COGITO_icon_layer_03.png-f5b7fbb3f5953c0fd0ce5fe9a02a8913.etc2.ctex"]
 
 [params]
 
