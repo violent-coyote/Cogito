@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Path to your Godot executable inside the .app bundle
-GODOT_PATH="/Users/carlosmichael/Library/Application Support/Godot/app_userdata/Godot Version Manager/versions/godot-4.2.2-spine.app/Contents/MacOS/Godot"
-
+GODOT_PATH="/Users/carlosmichael/Library/Application Support/Godot/app_userdata/Godot Version Manager/versions/godot-4.3-stable-spine.app/Contents/MacOS/Godot"
 # Path to your project directory (current directory)
 PROJECT_PATH="$(pwd)"
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://0c32kepv0ahx"]
+[gd_scene load_steps=26 format=3 uid="uid://0c32kepv0ahx"]
 
 [ext_resource type="Script" path="res://COGITO/Scripts/player_hud_manager.gd" id="1_0wdkf"]
 [ext_resource type="PackedScene" uid="uid://dhlrhobg5d4dj" path="res://COGITO/Components/UI/UI_PromptComponent.tscn" id="3_06ipe"]
@@ -10,6 +10,7 @@
 [ext_resource type="Theme" uid="uid://leudtt5jh16a" path="res://COGITO/Theme/Cogito_Theme_A.tres" id="5_j6s1a"]
 [ext_resource type="PackedScene" uid="uid://cg41w2fijcp4q" path="res://COGITO/InventoryPD/UiScenes/Slot.tscn" id="5_juyvt"]
 [ext_resource type="PackedScene" uid="uid://bf2qmquc7ys81" path="res://COGITO/InventoryPD/UiScenes/HotBarInventoryUi.tscn" id="6_8odro"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="6_eyjcy"]
 [ext_resource type="Script" path="res://COGITO/Scripts/ui_wieldable_hud.gd" id="8_2nbvg"]
 [ext_resource type="AudioStream" uid="uid://bnqnuewmntcyp" path="res://COGITO/Assets/Audio/Kenney/UiAudio/error_008.ogg" id="8_bxpra"]
 [ext_resource type="Texture2D" uid="uid://78js4558o61m" path="res://COGITO/Assets/Graphics/ItemIcons/Cogito_Pistol.png" id="9_1l2nt"]
@@ -51,6 +52,30 @@ default_hint_icon = ExtResource("3_o56n0")
 prompt_component = ExtResource("3_06ipe")
 hint_component = ExtResource("17_bidre")
 ui_attribute_prefab = ExtResource("20_lscav")
+
+[node name="LeftJoystick" parent="." instance=ExtResource("6_eyjcy")]
+visible = false
+layout_mode = 1
+action_left = "left"
+action_right = "right"
+action_up = "forward"
+action_down = "back"
+
+[node name="RightJoystick" parent="." instance=ExtResource("6_eyjcy")]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+action_left = "left"
+action_right = "right"
+action_up = "forward"
+action_down = "back"
 
 [node name="DamageOverlay" type="Control" parent="."]
 layout_mode = 1
@@ -461,11 +486,13 @@ vertical_alignment = 1
 [node name="TabContainer" type="TabContainer" parent="QuestHUD/QuestDisplay/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_j6s1a")
+current_tab = 0
 
 [node name="Active" type="VBoxContainer" parent="QuestHUD/QuestDisplay/VBoxContainer/TabContainer"]
 layout_mode = 2
 theme = ExtResource("5_j6s1a")
 theme_override_constants/separation = 4
+metadata/_tab_index = 0
 
 [node name="QuestEntry" parent="QuestHUD/QuestDisplay/VBoxContainer/TabContainer/Active" instance=ExtResource("16_qsjbq")]
 layout_mode = 2
@@ -476,10 +503,12 @@ layout_mode = 2
 [node name="Completed" type="VBoxContainer" parent="QuestHUD/QuestDisplay/VBoxContainer/TabContainer"]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 1
 
 [node name="Failed" type="VBoxContainer" parent="QuestHUD/QuestDisplay/VBoxContainer/TabContainer"]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 2
 
 [node name="FadeInScreen" type="Panel" parent="."]
 visible = false
