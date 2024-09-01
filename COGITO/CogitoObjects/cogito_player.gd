@@ -26,6 +26,10 @@ var is_showing_ui : bool
 ## Inventory resource that stores the player inventory.
 @export var inventory_data : CogitoInventory
 
+# @export_group("Virtual Joystick")
+var joystick_left : VirtualJoystick 
+var joystick_right : VirtualJoystick
+
 @export_group("Audio")
 ## AudioStream that gets played when the player jumps.
 @export var jump_sound : AudioStream
@@ -213,6 +217,11 @@ func _ready():
 		print("Player has no reference to pause menu.")
 
 	call_deferred("slide_audio_init")
+
+	var hud = get_node(player_hud)
+	if hud:
+		joystick_left = hud.get_node("LeftJoystick")
+		joystick_right = hud.get_node("RightJoystick")
 
 
 func slide_audio_init():
@@ -419,15 +428,29 @@ func _physics_process(delta):
 		_process_on_ladder(delta)
 		return
 	
+	# Getting input direction (with virtual joystick support)
 	# Getting input direction
 	var input_dir
 	if !is_movement_paused:
-		input_dir = Input.get_vector("left", "right", "forward", "back")
+		if joystick_left and joystick_left.is_pressed:
+			input_dir = joystick_left.output
+		else:
+			input_dir = Input.get_vector("left", "right", "forward", "back")
 	else:
 		input_dir = Vector2.ZERO
 	
-	# Processing analog stick mouselook
-	if joystick_h_event and !is_movement_paused:
+	# Processing analog stick mouselook (with virtual joystick support)
+	if joystick_right and joystick_right.is_pressed:
+		var look_vector = joystick_right.output
+		neck.rotate_y(-look_vector.x * JOY_H_SENS * delta)
+		neck.rotation.y = clamp(neck.rotation.y, deg_to_rad(-120), deg_to_rad(120))
+		
+		if INVERT_Y_AXIS:
+			head.rotate_x(look_vector.y * JOY_V_SENS * delta)
+		else:
+			head.rotate_x(-look_vector.y * JOY_V_SENS * delta)
+		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+	elif joystick_h_event and !is_movement_paused:
 			if abs(joystick_h_event.get_axis_value()) > JOY_DEADZONE:
 				if INVERT_Y_AXIS:
 					head.rotate_x(deg_to_rad(joystick_h_event.get_axis_value() * JOY_H_SENS))
